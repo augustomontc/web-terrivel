@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Monstro</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+  </head>
+<body>
+    <div>  
+<form action="http://terrivel.herokuapp.com/monster" method="POST">
+    <fieldset>
+        <h2>Alimente o monstro</h2><br>
+        <div class="campo">
+            <label for="nome">Nome do monstro: </label>
+            <input type="text" id="nome" name="nome" style="width: 10em" value="" required>
+        </div>
+
+        <div class="campo">
+            <label for="num_pedras">Número de pedras: </label>
+            <input type="number" min="0" name="num_pedras" autofocus required>
+        </div>
+
+        <div class="campo">
+            <label for="tam_pedras">Tamanho das pedras: </label>
+            <input type="number" min="1" max="7" value="3" name="tam_pedras"  required>
+        </div>
+
+        <div class="campo">
+            <label for="corCeu1">Cor do céu: </label>
+            <input type="color" value="#6481E5" name="corCeu1" required>
+            <input type="color" value="#8AB3E2" name="corCeu2" required>
+        </div>
+
+        <div class="campo">
+            <label for="tipo_pedras">Tipo de pedras: </label>
+            <select name="tipo_pedras">
+                <option value="marroada">Marroada</option>
+                <option value="ametista">Ametista</option>
+                <option value="topazio">Topazio</option>
+                <option value="espinela">Espinela</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label><input id="chkbox" type="checkbox" name="tipo_pedras_sortidas" value="0"> Pedras sortidas </label>
+        </div>
+            
+
+
+        <button id="limpar" type="reset">Limpar</button>
+        <button id="enviar" type="submit" name="submit">Enviar</button>
+    </fieldset>
+</form>
+    </div>
+</body>
+</html>
